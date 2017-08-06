@@ -1,0 +1,254 @@
+
+/*        Navbar        */
+
+nav {
+  max-width: 1024px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #888888;
+  margin-bottom: 50px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: teal;
+}
+
+/*        Main Style        */
+
+body {
+  background-image: url("../images/whirlpool.png");
+  font-family: monospace;
+  /*position: relative;*/
+}
+
+main {
+  display: flex;
+  max-width: 1024px;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+h1 {
+  display: block;
+  font-size: 22px;
+  -webkit-margin-before: 0.67em;
+  -webkit-margin-after: 0.67em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 18px;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  padding: 12px;
+}
+
+footer {
+  color: white;
+  background: #333;
+  font-family: sans-serif;
+  font-size: 12px;
+  /*width: 100%;*/
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 12px;
+  position: fixed;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 20px;
+  border-top: thick solid teal;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+/*        Left Hand Content Style       */
+
+
+#about, #contact, #portfolio{
+  min-width: 200px;
+  max-width: 70%;
+  display: flex;
+  background: #eaeaea;
+  padding: 0px 16px 16px 16px;
+  box-shadow: 5px 5px 5px #888888;
+  margin-left: 48px;
+}
+
+#about img {
+  float: left;
+  height: 200px;
+  width: 200px;
+  padding: 16px;
+}
+
+/*        Portfolio Style       */
+#portfolio {
+  display: block;
+  /*max-width: 564px;*/
+}
+
+#portfolio img {
+  /*width: 200px;*/
+  padding: 8px;
+}
+
+.img-container {
+  /*TODO*/
+}
+
+/*        Email Form        */
+
+.container {
+  /*margin: 0 24px 24px;*/
+  /*max-width: 70%;*/
+}
+
+.contact-form {
+  /*display: block;*/
+  /*max-width: 70%*/
+  /*min-height: : 350px;
+  width: 732px;*/
+  padding: 16px;
+}
+
+
+#name, #email{
+  /*max-width: 500px;*/
+  /*display: block;
+  display: inline-block;*/
+  /*width: 70%;*/
+  /*margin: 12px;*/
+}
+
+label {
+  /*display: flex;*/
+  /*display: inline-block;
+  display: block;*/
+}
+
+#message {
+  width: 100%;
+  height: 200px;
+}
+
+textarea, input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 16px;
+  background: teal;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.btn:hover {
+  background: #333;
+  text-decoration: none;
+}
+
+/*        Right Hand Links        */
+
+#connect {
+  max-height: 174px;
+  display: inline-block;
+  background: #eaeaea;
+  padding: 0 20px 20px 20px;
+  margin: 0 48px 0px 48px;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+ #connect a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   background: #666;
+   border-bottom: thin solid white;
+ }
+
+ #connect a:hover:not(.active) {
+   background-color: #111;
+ }
+
+/*        Media Queries       */
+
+@media screen and (max-width: 580px) {
+  body {
+    color: red;
+  }
+
+  main {
+    position: relative;
+    display: block;
+  }
+
+  #about img {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 16px 0;
+  }
+
+  #about, #contact, #portfolio{
+    display: block;
+    /*position: static;*/
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+   #connect {
+    display: block;
+    /*position: static;*/
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
