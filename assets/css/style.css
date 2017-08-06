@@ -219,10 +219,23 @@ textarea, input[type=text], select {
 
 /*        Media Queries       */
 
-@media screen and (max-width: 580px) {
-  body {
-    color: red;
+@media screen and (max-width: 768px) {
+
+  #about img {
+    display: block;
+    float: none;
   }
+
+  #portfolio img {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 580px) {
 
   main {
     position: relative;
@@ -239,16 +252,16 @@ textarea, input[type=text], select {
   }
 
   #about, #contact, #portfolio{
+    padding-top: 8px;
     display: block;
-    /*position: static;*/
     margin: 0 auto;
     max-width: 80%;
   }
 
    #connect {
     display: block;
-    /*position: static;*/
-    margin: 0 auto;
+    padding-top: 8px;
+    margin: 16px auto;
     max-width: 80%;
   }
 }
