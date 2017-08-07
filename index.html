@@ -6,6 +6,18 @@
       <title>John Torrence</title>
       <link rel="stylesheet" href="assets/css/reset.css">
       <link rel="stylesheet" href="assets/css/style.css">
+
+      <script>
+        function show(id) {
+          x = document.getElementsByTagName('section')
+          console.log(x.length);
+          for (var i = 0; i < x.length; i++) {
+            x[i].style.display = 'none'
+          }
+          document.getElementById(id).style.display = '';
+        }
+      </script>
+
     </head>
   </head>
   <body>
@@ -13,9 +25,9 @@
 
       <ul>
         <li style="margin-left: 15%"><a class="active" href="index.html">John</a></li>
-        <li style="float:right"><a href="portfolio.html">Portfolio</a></li>
-        <li style="float:right"><a href="contact.html">Contact</a></li>
-        <li style="float:right"><a href="index.html">About</a></li>
+        <li style="float:right"><a href="#" onclick="show('portfolio'); return false;">Portfolio</a></li>
+        <li style="float:right"><a href="#" onclick="show('contact'); return false;">Contact</a></li>
+        <li style="float:right"><a href="#" onclick="show('about'); return false;">About</a></li>
 
       </ul>
     </nav>
@@ -37,7 +49,43 @@
           <p>I'm a native Austinite. I love to hike, travel, and hike while traveling! I also love to take photos, but I don't have a place to share those yet. I spent the last decade or so studying Phyics and working in the semiconductor industry at Intel.</p>
 
         </div>
-          </section>
+      </section>
+
+      <section style="display:none" id="contact">
+
+        <div class="container">
+        <h1>Get in Touch:</h1>
+        <hr>
+        <form class="contact-form" action="index.html" method="post">
+
+          <label>Name</label>
+          <input type="text" id="name" placeholder="John Smith">
+
+          <label>Email</label>
+          <input type="text" id="email" placeholder="example@gmail.com">
+
+          <label>Your Message</label>
+          <textarea type="text" id="message" placeholder=""></textarea>
+
+          <input class="btn" type="submit" value="Submit">
+
+        </form>
+
+        </div>
+      </section>
+
+      <section style="display:none" id="portfolio">
+        <h1>My Portfolio:</h1>
+        <hr>
+        <div class="img-container">
+          <img src="http://via.placeholder.com/200x200" alt="">
+          <img src="http://via.placeholder.com/200x200" alt="">
+          <img src="http://via.placeholder.com/200x200" alt="">
+          <img src="http://via.placeholder.com/200x200" alt="">
+          <img src="http://via.placeholder.com/200x200" alt="">
+          <img src="http://via.placeholder.com/200x200" alt="">
+        </div>
+      </section>
 
       <aside id="connect">
         <h2>Connect:</h2>
